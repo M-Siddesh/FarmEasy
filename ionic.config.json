@@ -1,0 +1,7 @@
+{
+  "name": "FarmEasy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
