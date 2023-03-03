@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title style="float: left; margin-right: 140px; margin-top: -40px;">Create Job</ion-title>
+        <ion-icon name="close-circle" (click)="closeModel()">Close</ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form>
+        <ion-item>
+            <ion-input type="text" placeholder="Job Title" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-textarea placeholder="Enter more information here..." required></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="Job Location" required></ion-input>
+            <ion-icon name="location"></ion-icon>
+        </ion-item>
+        <ion-item>
+            <ion-datetime placeholder="Select Date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" placeholder="Job Timing" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" placeholder="Salary" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" placeholder="No. of requirement" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Status</ion-label>
+            <ion-select interface="popover">
+                <ion-select-option value="open">Open</ion-select-option>
+                <ion-select-option value="closed">Closed</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+    </form>
+    <ion-button style="margin-top: 40px;" expand="block" size="default" type="submit" expand="block" share="round" color="success" (click)="showAlert()">Create</ion-button>
+</ion-content>

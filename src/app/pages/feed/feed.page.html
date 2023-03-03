@@ -1,0 +1,571 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Home</ion-title>
+    </ion-toolbar>
+  
+    <ion-toolbar>
+      <ion-segment value="jobs" scrollable="true" [(ngModel)]="segmentModel" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="jobs">Jobs</ion-segment-button>
+        <ion-segment-button value="favorites">Loans</ion-segment-button>
+        <ion-segment-button value="news">News</ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item *ngIf="segmentModel === 'jobs'" style="margin-left: 245px;">
+      <ion-button (click)="openCreateJobModal()">Post Job</ion-button>
+    </ion-item>
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>Tree Farm Laborer</ion-card-title>
+        <ion-card-subtitle>Maple leaf farm</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Farm laborer needed for tree farm in Whitefield area.
+        Must be able to work with equipment such as skid loaders, mowers and tractors.
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location" slot="start"></ion-icon>Whitefield
+        </div>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>3-Aug-2021
+        </div>
+  
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>Livestock Farm Worker </ion-card-title>
+        <ion-card-subtitle>Nutrien</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Attend to animals produced for animal products, such as meat, fur, skins, feathers, eggs, milk, and honey.
+        Duties may include feeding, watering, herding and grazing.
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Tumkur
+        </div>
+        <div>
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>1-Aug-2021
+        </div>
+        <!-- <ion-button fill="outline" slot="end">View</ion-button> -->
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>Seasonal Farm laborer</ion-card-title>
+        <ion-card-subtitle>LPZ Farm</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Must have a valid drivers license.
+        Possible responsibilities include planting, spraying, harvesting, servicing of equipment, and local transportation
+        of grain.
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Hosakote
+        </div>
+        <div>
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>2-Sept-2021
+        </div>
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>General Farm laborer</ion-card-title>
+        <ion-card-subtitle>Bangalore University</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        The essential tasks at hand are:<br>
+  
+        1) feed animals both morning and evening<br>
+        2) mow pastures<br>
+        3) be available for special projects as needed during working hours
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Kengeri
+        </div>
+        <div>
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>01-Sept-2021
+        </div>
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>General Farm labourer</ion-card-title>
+        <ion-card-subtitle>Maple Farm</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Equipment involved is tractors, swathers, sprayers and other smaller farm implements.
+        Responsibilities: <br>
+        1. Daily operation and maintenance of the sprinkler systems.<br>
+        2. Field duties include the daily operation and maintenance of the farm equipment that is used in the production
+        of the crops.<br>
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Whitefield
+        </div>
+        <div>
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>15-Aug-2021
+        </div>
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>Tree Farm Laborer</ion-card-title>
+        <ion-card-subtitle>Maple leaf farm</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Farm laborer needed for tree farm in Whitefield area.
+        Must be able to work with equipment such as skid loaders, mowers and tractors.
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Whitefield
+        </div>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>3-Aug-2021
+        </div>
+  
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>Livestock Farm Worker </ion-card-title>
+        <ion-card-subtitle>Nutrien</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Attend to animals produced for animal products, such as meat, fur, skins, feathers, eggs, milk, and honey.
+        Duties may include feeding, watering, herding and grazing.
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Tumkur
+        </div>
+        <div>
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>1-Aug-2021
+        </div>
+        <!-- <ion-button fill="outline" slot="end">View</ion-button> -->
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>Seasonal Farm laborer</ion-card-title>
+        <ion-card-subtitle>LPZ Farm</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Must have a valid drivers license.
+        Possible responsibilities include planting, spraying, harvesting, servicing of equipment, and local transportation
+        of grain.
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Hosakote
+        </div>
+        <div>
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>2-Sept-2021
+        </div>
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>General Farm laborer</ion-card-title>
+        <ion-card-subtitle>Bangalore University</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        The essential tasks at hand are:<br>
+  
+        1) feed animals both morning and evening<br>
+        2) mow pastures<br>
+        3) be available for special projects as needed during working hours
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Kengeri
+        </div>
+        <div>
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>01-Sept-2021
+        </div>
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'jobs'">
+      <ion-card-header>
+        <ion-card-title>General Farm labourer</ion-card-title>
+        <ion-card-subtitle>Maple Farm</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Equipment involved is tractors, swathers, sprayers and other smaller farm implements.
+        Responsibilities: <br>
+        1. Daily operation and maintenance of the sprinkler systems.<br>
+        2. Field duties include the daily operation and maintenance of the farm equipment that is used in the production
+        of the crops.<br>
+      </ion-card-content>
+  
+      <ion-item>
+        <div style="width: 100px;">
+          <ion-icon style="color: #2970ec;" name="location"></ion-icon>Whitefield
+        </div>
+        <div>
+          <ion-icon style="color: #2970ec;" name="today"></ion-icon>15-Aug-2021
+        </div>
+        <ion-button style="margin-left: 78px;height: 17px;width: 40px; font-size: 9px;" fill="outline"
+          (click)="openIonModal()" slot="end">View</ion-button>
+      </ion-item>
+  
+    </ion-card>
+  
+  
+  
+  
+    <ion-card *ngIf="segmentModel === 'news'">
+      <img src="assets/icon/images/eNam-thumb.png" class="smallLogo" />
+      <ion-card-header>
+        <ion-card-subtitle>Online trading platform</ion-card-subtitle>
+        <ion-card-title>The National Agriculture Market (eNAM) </ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Introduced by the Ministry of Agriculture and Farmers’ Welfare, this scheme looks to promote uniformity in
+        agriculture marketing by - <br>
+        1. Streamlining procedures across integrated markets<br>
+        2. Integrate Agricultural Produce Market Committee (APMCs) across India<br>
+      </ion-card-content>
+    </ion-card>
+    <br>
+    <ion-card *ngIf="segmentModel === 'news'">
+      <img src="assets/icon/images/NMSA.png" class="smallLogo" />
+      <ion-card-header>
+        <ion-card-subtitle>To enhance agricultural productivity</ion-card-subtitle>
+        <ion-card-title>National Mission For Sustainable Agriculture (NMSA) </ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        NMSA is a parent agricultural scheme under which the government implements - <br>
+        1. Water use efficiency<br>
+        2. Nutrient Management<br>
+        3. Livelihood diversification<br>
+      </ion-card-content>
+    </ion-card>
+    <br>
+    <ion-card *ngIf="segmentModel === 'news'">
+      <img src="assets/icon/images/PMKSY.png" class="smallLogo" />
+      <ion-card-header>
+        <ion-card-subtitle>More crop per drop</ion-card-subtitle>
+        <ion-card-title>Pradhan Mantri Krishi Sinchai Yojana (PMKSY) </ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        Introduces a focused manner with end to end solutions on source creation, distribution, management, field
+        application, and extension activities.
+        Objectives: <br>
+  
+        1. Increased investment in irrigation at the field level<br>
+        2. Expand cultivable area under irrigation<br>
+        3. Improve farm water use efficiency to reduce wastage of water<br>
+        4. Enhance the adoption of being precise in irrigation and other water-saving technologies (more crop per
+        drop)<br>
+      </ion-card-content>
+    </ion-card>
+    <br>
+    <ion-card *ngIf="segmentModel === 'news'">
+      <img src="assets/icon/images/PMFBY.png" class="smallLogo" />
+      <ion-card-header>
+        <ion-card-subtitle>Crop Insurance Scheme</ion-card-subtitle>
+        <ion-card-title>Pradhan Mantri Fasal Bima Yojana (PMFBY) </ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        It is a government-sponsored crop insurance scheme that integrates multiple stakeholders on a single platform. -
+        <br>
+        Objectives: <br>
+  
+        1. Provide insurance coverage and financial support to farmers in case crops get damaged due to natural
+        calamities, pests & diseases.<br>
+        2. Stabilise the income of farmers to ensure a steady career and business growth.<br>
+        3. Encourage farmers to adopt innovative and modern agricultural practices.<br>
+        4. Ensure positive cash and credit flow in the agriculture sector. <br>
+      </ion-card-content>
+    </ion-card>
+  
+  
+  
+  
+  
+  
+    <ion-card *ngIf="segmentModel === 'favorites'">
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>HDFC Bank - Crop Loan</ion-label>
+        <ion-button fill="outline">Apply</ion-button>
+      </ion-item>
+  
+      <ion-card-content>
+        A farmer to meet his short-term expenses arising due to cultivation of crops, maintenance of farm equipment, and other post farm activities
+      </ion-card-content>
+  
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="pricetags" slot="start"></ion-icon>
+        <ion-label>6% - 9%</ion-label>
+      </ion-item>
+  
+  
+      <ion-item class="ion-activated">
+        <ion-icon name="wallet" slot="start"></ion-icon>
+        <ion-label>Upto 3 Lakhs per acre</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>1-3 years</ion-label>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'favorites'">
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>SBI Bank - Term Loan</ion-label>
+        <ion-button fill="outline">Apply</ion-button>
+      </ion-item>
+  
+      <ion-card-content>
+        These are long term loan schemes which a farmer can avail to meet their non-seasonal expenses. One can avail this loan to buy or upgrade equipment such as windmills, solar power, etc.
+      </ion-card-content>
+  
+      <ion-item class="ion-activated">
+        <ion-icon name="pricetags" slot="start"></ion-icon>
+        <ion-label>10.75% - 13.5%</ion-label>
+      </ion-item>
+  
+  
+      <ion-item class="ion-activated">
+        <ion-icon name="wallet" slot="start"></ion-icon>
+        <ion-label>Upto 10 Lakhs</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>1-5 years</ion-label>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'favorites'">
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>ICICI Bank - Solar Pumpset Loan</ion-label>
+        <ion-button fill="outline">Apply</ion-button>
+      </ion-item>
+  
+      <ion-card-content>
+        If a farmer is involved in small irrigation projects and require capital to buy photo voltaic pumping system, then availing a solar pump set loan is the appropriate option.
+      </ion-card-content>
+  
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="pricetags" slot="start"></ion-icon>
+        <ion-label>3% - 5%</ion-label>
+      </ion-item>
+  
+  
+      <ion-item class="ion-activated">
+        <ion-icon name="wallet" slot="start"></ion-icon>
+        <ion-label>Upto 2 Lakhs</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>0-3 years</ion-label>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'favorites'">
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>Axis Bank - Forestry Loan</ion-label>
+        <ion-button fill="outline">Apply</ion-button>
+      </ion-item>
+  
+      <ion-card-content>
+        If a person is involved in growing crops which grows on trees, then they can apply for a forestry loan. The loan amount can be used to meet the cost of activities such as converting a barren land into a farming land, setting up irrigation channels, clearing wild trees, etc. 
+      </ion-card-content>
+  
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="pricetags" slot="start"></ion-icon>
+        <ion-label>10.75% - 13.5%</ion-label>
+      </ion-item>
+  
+  
+      <ion-item class="ion-activated">
+        <ion-icon name="wallet" slot="start"></ion-icon>
+        <ion-label>Upto 10 Lakhs</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>1-5 years</ion-label>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'favorites'">
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>IDBI Bank - Horticultural Loan</ion-label>
+        <ion-button fill="outline">Apply</ion-button>
+      </ion-item>
+  
+      <ion-card-content>
+        Farmers involved in setting up vegetable farms and orchards can apply for a horticultural loan which not only allows them to meet the cost of managing such type of farms.
+      </ion-card-content>
+  
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="pricetags" slot="start"></ion-icon>
+        <ion-label>7% - 11%</ion-label>
+      </ion-item>
+  
+  
+      <ion-item class="ion-activated">
+        <ion-icon name="wallet" slot="start"></ion-icon>
+        <ion-label>Upto 5 Lakhs</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>1-5 years</ion-label>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'favorites'">
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>NABARD - National Livestock Mission</ion-label>
+        <ion-button fill="outline">Apply</ion-button>
+      </ion-item>
+  
+      <ion-card-content>
+        It is an initiative of the Ministry of Agriculture and Farmers’ Welfare. The mission, which commenced from 2014-15, has the objective of sustainable development of the livestock sector.
+      </ion-card-content>
+  
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="pricetags" slot="start"></ion-icon>
+        <ion-label>10.75% - 13.5%</ion-label>
+      </ion-item>
+  
+  
+      <ion-item class="ion-activated">
+        <ion-icon name="wallet" slot="start"></ion-icon>
+        <ion-label>Upto 10 Lakhs</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>1-5 years</ion-label>
+      </ion-item>
+    </ion-card>
+  
+    <ion-card *ngIf="segmentModel === 'favorites'">
+      <ion-item>
+        <ion-icon name="card" slot="start"></ion-icon>
+        <ion-label>SBI Bank - Tractor Loan</ion-label>
+        <ion-button fill="outline">Apply</ion-button>
+      </ion-item>
+  
+      <ion-card-content>
+        Farmers involved in buying a tractor can apply for such type of loans or if one need to raise working capitals to meet their tractor expenses. 
+      </ion-card-content>
+  
+      <ion-item href="#" class="ion-activated">
+        <ion-icon name="pricetags" slot="start"></ion-icon>
+        <ion-label>8% - 20%</ion-label>
+      </ion-item>
+  
+  
+      <ion-item class="ion-activated">
+        <ion-icon name="wallet" slot="start"></ion-icon>
+        <ion-label>Upto 20 Lakhs</ion-label>
+      </ion-item>
+  
+      <ion-item>
+        <ion-icon name="calendar" slot="start"></ion-icon>
+        <ion-label>5-10 years</ion-label>
+      </ion-item>
+    </ion-card>
+  </ion-content>
+  
+  
+  <ion-menu side="start" menuId="first" contentId="content1">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="person"></ion-icon><span style="margin:10px;">Profile</span>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="settings"></ion-icon><span style="margin:10px;">Settings</span>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="log-out" (click)="logout()"></ion-icon><span (click)="logout()"
+            style="margin:10px;">Logout</span>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+    <ion-router-outlet id="content1"></ion-router-outlet>
+  </ion-menu>

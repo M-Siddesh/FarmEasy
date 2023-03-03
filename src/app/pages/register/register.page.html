@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Registration</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding='true'>
+    <img src="assets/icon/images/logo.png" class="smallLogo" />
+  
+    <!-- <form #form="ngForm" (ngSubmit)="register(form)" method="post"></form> -->
+    <form>
+  
+      <ion-list>
+  
+        <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input ngModel name="fName"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input ngModel name="lName"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="floating">Phone number</ion-label>
+          <ion-input autocomplete="off" type="email" ngModel name="pNumber"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="floating">OTP</ion-label>
+          <ion-input autocomplete="off" type="password" ngModel name="password"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Role</ion-label>
+          <ion-select interface="popover">
+            <ion-select-option value="landOwner">Land Owner</ion-select-option>
+            <ion-select-option value="labourer">Labourer</ion-select-option>
+          </ion-select>
+        </ion-item>
+  
+      </ion-list>
+      <ion-button expand="full" share="round" color="success" (click)="presentToast()">Register</ion-button>
+    </form>
+    
+    <ion-item lines='none'>
+      <p text-center>Already have an account?</p> &nbsp; &nbsp;
+      <ion-button expand="full" color="primary" (click)="loginAction()">Login</ion-button>
+    </ion-item>
+  </ion-content>

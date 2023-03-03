@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>    
+      <ion-title style="float: left;margin-right: 140px;
+        margin-top: -4px;">Job Details </ion-title><ion-icon name="close-circle" (click)="closeModel()">Close</ion-icon>
+    </ion-toolbar>  
+  </ion-header> 
+  
+  <ion-content>
+    
+    <ion-card>
+      
+      <ion-card-header>
+        <span style="margin-left: 235px;"><a>Edit</a></span>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Job Name :</p>
+         Tree Farm Laborer
+      </ion-card-content>
+      <ion-card-content>
+        <p>Description :</p>
+        Farm laborer needed for tree farm in Whitefield area.
+        Must be able to work with equipment such as skid loaders, mowers and tractors.
+      </ion-card-content>
+      <ion-card-content>
+        <ion-icon name="location"></ion-icon>:<p>Whitefield</p>      
+      </ion-card-content>
+      <ion-card-content>
+        <p>Date : 3-Aug-2020</p>      
+      </ion-card-content>
+      <ion-card-content>
+        <p>Salary : 500 per/day</p>      
+      </ion-card-content>
+      <ion-card-content>
+        <p>Timing : 9AM to 4PM include break</p>
+      </ion-card-content>
+      <ion-card-content>
+        <p>Applied count : 20</p>
+      </ion-card-content>
+      <ion-card-content>
+        <p>On Field count : <a class="nav-link"  (click)="OpenOnfieldCountModal()">9</a></p>
+      </ion-card-content>
+      
+    </ion-card>
+    <!-- <ion-item><ion-button style="margin-left: 215px;" name="apply" (click)="showAlert()">Apply</ion-button></ion-item> -->
+    
+  </ion-content>

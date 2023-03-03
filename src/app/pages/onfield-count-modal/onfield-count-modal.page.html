@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-toolbar>    
+        <ion-title style="float: left;margin-right: 98px;
+        margin-top: -4px;">On Field Count </ion-title><ion-icon name="close-circle" (click)="closeModel()">Close</ion-icon>
+      </ion-toolbar> 
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-grid>
+    <ion-item  *ngFor="let item of items">
+      <ion-row>
+          <ion-col size="3">
+            coconut harvest
+          </ion-col>
+          <ion-col size="3">
+            <div>{{item.name}}</div>
+          </ion-col>
+          <ion-col size="3">
+            <div>Rs 500/day</div>
+          </ion-col>
+          <ion-col size="2">
+            <div>
+              <ion-button  color="success" (click)="pay()">Pay</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+    </ion-item>
+  </ion-grid>
+  </ion-content>

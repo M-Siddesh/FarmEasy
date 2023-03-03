@@ -1,0 +1,30 @@
+.bottom{
+    position: fixed;
+    left: 0;
+    bottom: 1px;
+    right: 0;
+}
+.upi{
+    height: 70px;
+    .img{
+        height: inherit;
+    }
+}
+
+.fino{
+    height: 5vh;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    flex: 1;
+    margin: 18px;
+}
+
+.row2 {
+    margin: 20px;
+}
